@@ -7,7 +7,8 @@
         "es6": true,
         "jquery": true
     },
-    "extends": ["eslint:recommended", "google"],
+    "extends": ["eslint:recommended",
+        "plugin:react/recommended", "google"],
     "parserOptions": {
         "ecmaVersion": 2020
     },
@@ -16,6 +17,8 @@
     },
     "ignorePatterns": ["node_modules/", "/dist/"],
     "rules": {
+        "react/jsx-uses-react": "error",   
+        "react/jsx-uses-vars": "error" ,
         "valid-jsdoc": "off",
         "require-jsdoc": "off",
         "object-curly-spacing": "off",
@@ -32,12 +35,12 @@
         "no-loop-func": ["error"],
         "comma-style": ["error", "last"],
         "space-before-blocks": ["error", "always"],
-        "no-mixed-spaces-and-tabs": ["error"],
+        "no-mixed-spaces-and-tabs": "off",
         "no-unused-vars": ["error"],
         "no-extra-semi": ["error"],
         "no-console": ["warn"],
         "one-var": "off",
         "no-debugger": "warn",
-        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }]
+        "indent": "off"
     }
 }

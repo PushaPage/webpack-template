@@ -1,0 +1,29 @@
+.scroll-thumb-html {
+    background: #FEFF37;
+    box-shadow: 0 0.875em 1.75em rgba(28, 97, 172, 0.25),
+        0 2.125em 2.125em rgba(28, 97, 172, 0.22),
+        inset 1px 1px 4px rgba(28, 97, 172, 0.5), 1px 1px 4px #1c61ac;
+    z-index: 20;
+    width: 8px;
+    border-radius: 6px,
+}
+
+.scroll-info {
+    @include min_w_md {
+        overflow: visible !important;
+    }
+
+    &__view {
+        @include min_w_md {
+            position: static !important;
+            overflow: visible !important;
+            margin: 0 !important;
+        }
+    }
+
+    &__thumb-y {
+        @include min_w_md {
+            display: none !important;
+        }
+    }
+}

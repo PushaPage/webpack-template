@@ -117,7 +117,8 @@ const fileLoaders = () => {
 // Babel options
 const babelOptions = preset => {
     const opts = {
-        presets: ['@babel/preset-env'],
+        presets: ['@babel/preset-env', '@babel/preset-react'],
+        plugins: ['@babel/plugin-proposal-class-properties'],
     };
 
     if (preset) opts.presets.push(preset);
@@ -226,7 +227,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 include: /scripts/,
                 use: jsLoaders(),
             },

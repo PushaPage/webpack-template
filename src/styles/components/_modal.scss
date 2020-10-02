@@ -1,0 +1,60 @@
+#root {
+    .react-modal {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: rgba($primary-500, .7);
+        backdrop-filter: blur(10px);
+        transition: backdrop-filter .3s ease .3s;
+
+        &-overlay {
+            background: none;
+        }
+
+        &-body {
+            background: none;
+            max-width: 40.625em;
+            width: 100%;
+        }
+
+        &-body-close {
+            z-index: 20;
+            top: 30px;
+            right: 25px;
+            width: 30px;
+            height: 30px;
+            animation: pulse .9s infinite ease-out;
+            transition: $main-transition;
+
+
+            &:hover {
+                animation: none;
+
+                &::before, &::after {
+                    background: $danger-300;
+                }
+            }
+
+            &:active {
+                transform: scale(.9);
+            }
+
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                height: 7px;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                margin-top: -1px;
+                margin-top: -6px;
+                border-radius: 120% 0;
+                background: $dark-400;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.tab-chose {}
+
+.clicable {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    background: grey;
+    opacity: .8;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.not-clicable {
+    position: relative;
+    background: #FFF;
+    z-index: 10;
+    cursor: default;
+}

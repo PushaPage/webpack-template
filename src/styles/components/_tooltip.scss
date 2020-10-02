@@ -1,0 +1,128 @@
+#tooltip-title {
+    padding: 0;
+    background: none;
+    border: none;
+    pointer-events: auto;
+
+    &:after {
+        z-index: 20;
+    }
+
+
+}
+
+.__react_component_tooltip.show:hover {
+    opacity: 1;
+
+    .thought-bubble__inner {
+        transition-delay: .4s;
+        opacity: 1;
+    }
+
+    .thought-bubble__child-first {
+        transition-delay: .2s;
+        opacity: 1;
+    }
+
+    .thought-bubble__child-second {
+        transition-delay: .1s;
+        opacity: 1;
+
+    }
+}
+
+.tooltip-title {
+    padding-top: 45px;
+
+    &__inner {
+        padding-top: 25px;
+        padding-bottom: 55px;
+    }
+
+    &__link {
+        position: absolute;
+        opacity: 1;
+        bottom: 10px;
+        left: -18px;
+        right: -18px;
+        font-size: 16px;
+        text-align: center;
+        transition: $main-transition;
+        color: $dark-800;
+        cursor: pointer;
+        animation: pulse .9s infinite ease-out;
+
+
+
+        &:hover {
+            animation: none;
+            color: $primary-600;
+
+
+        }
+    }
+
+    &__bubble {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: -15px;
+    }
+}
+
+
+
+
+
+.thought-bubble {
+    &__inner {
+        background: $white;
+        color: $dark-800;
+        width: 185px;
+        border-color: $dark-800;
+        border-color: rgba($primary-600, 1);
+        border-style: solid;
+        border-width: 2px 4px 3px;
+        padding: 20px 10px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 24px;
+        transition: $main-transition;
+        opacity: 0;
+        box-shadow: 0 7px 14px rgba($primary-600, .25), 0 10px 10px rgba($primary-600, .22);
+
+    }
+
+
+    &__child-first {
+        background: $white;
+        border: 3px solid $dark-800;
+        border: 3px solid rgba($primary-600, .9);
+        position: absolute;
+        width: 40px;
+        padding: 8px;
+        border-radius: 50%;
+        left: 0;
+        bottom: 0;
+        transition: $main-transition;
+        opacity: 0;
+    }
+
+    &__child-second {
+        position: absolute;
+        border: 2px solid $dark-800;
+        border: 2px solid rgba($primary-600, .8);
+        width: 25px;
+        padding: 5px;
+        border-radius: 50%;
+        left: 28px;
+        bottom: -12px;
+        background: $white;
+        transition: $main-transition;
+        opacity: 0;
+    }
+
+}
+
+
+/*right circle shape speech bubble*/

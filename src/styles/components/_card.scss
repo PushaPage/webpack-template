@@ -1,0 +1,70 @@
+.card {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--xxs {
+        max-width: 11.25em;
+    }
+
+    &--lg {
+        max-width: 59.75em;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: rgba($primary-500, .7);
+        border-radius: .625em;
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba($primary-600, .8);
+        top: -.25em;
+        right: -.375em;
+        bottom: -.25em;
+        left: -.5em;
+        box-shadow: 0 .875em 1.75em rgba($primary-400, .25), 0 2.125em 2.125em rgba($primary-400, .22);
+        z-index: 5;
+        transform: skew(-1deg, 3deg);
+    }
+
+    &__inner {
+        background: url(../images/card.jpg) no-repeat 50%/cover;
+        border: .25em solid rgba($primary-600, .8);
+        border-radius: .625em;
+        padding-left: .625em;
+        padding-right: .625em;
+        position: relative;
+        transform: skew(2deg, 2deg);
+        box-shadow: 0 .875em 1.75em rgba($primary-600, .25), 0 2.125em 2.125em rgba($primary-600, .22), inset 2px 2px 5px rgba($primary-600, .5), 1px 1px 5px rgba($primary-600, 1);
+        z-index: 10;
+
+        &--with-info {
+            padding-right: 4.375em;
+            padding-left: 4.375em;
+        }
+
+    }
+
+    &__content {
+        background: $white;
+        // padding: 1em;
+        font-size: 1.25em;
+        border: 1px solid $dark-500;
+        border-radius: .5em;
+        color: $dark-500;
+
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 1.25em;
+        right: 1.25em;
+    }
+
+    &__bubble {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        z-index: 15;
+    }
+}

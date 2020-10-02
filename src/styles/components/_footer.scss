@@ -1,5 +1,14 @@
 footer {
-	flex-shrink: 0;
-	text-align: center;
-	font-weight: 700;
+    flex-shrink: 0;
+    background-position: 50% 100%;
+
+    // &:before {
+    //     top: -.75em;
+    //     bottom: 0;
+    //     background: linear-gradient(180deg, rgba($primary-400, .7) 5px, rgba($primary-400, 0) 33px);
+    // }
+
+    // &:after {
+    //     top: -1em;
+    // }
 }

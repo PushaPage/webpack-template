@@ -28,12 +28,20 @@
     }
 }
 
+
 // mq max
-@mixin max_w_xs {
+@mixin max_w_xxs {
     @media (max-width: 479px) {
         @content;
     }
 }
+
+@mixin max_w_xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
 
 @mixin max_w_sm {
     @media (max-width: 767px) {
@@ -60,32 +68,38 @@
 }
 
 // mq min
+@mixin min_w_xs {
+    @media (min-width: 489.98px) {
+        @content;
+    }
+}
+
 @mixin min_w_sm {
-    @media (min-width: 480px) {
+    @media (min-width: 575.98px) {
         @content;
     }
 }
 
 @mixin min_w_md {
-    @media (min-width: 768px) {
+    @media (min-width: 767.98px) {
         @content;
     }
 }
 
 @mixin min_w_lg {
-    @media (min-width: 992px) {
+    @media (min-width: 991.98px) {
         @content;
     }
 }
 
 @mixin min_w_xl {
-    @media (min-width: 1200px) {
+    @media (min-width: 1199.98px) {
         @content;
     }
 }
 
 @mixin min_w_xxl {
-    @media (min-width: 1366px) {
+    @media (min-width: 1365.98px) {
         @content;
     }
 }

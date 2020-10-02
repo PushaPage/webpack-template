@@ -1,11 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html,
-body {
+body,
+#root {
     height: 100%;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-basic;
+    font-weight: normal;
+    font-size: 16px;
+
 }
+
+
 
 .wrap-helper {
     height: 100%;
@@ -14,16 +24,142 @@ body {
 
     &__inner {
         flex: 1 0 auto;
+        overflow: hidden;
+        position: relative;
+        background: url(../images/bg-main.jpg) no-repeat 50%/cover;
+        background-attachment: fixed;
+
+        @include max_w_sm {
+            background: url(../images/bg-main-mob.jpg) repeat-y 0/contain;
+            background-attachment: scroll;
+        }
+
     }
 }
 
-// h1 {
-//     text-align: center;
-//     @include responsiveFz(25, 14, 1199);
-// }
 
-// img {
-//     display: block;
-//     margin: 0 auto;
-//     max-height: 400px;
-// }
+
+.about {
+    background: red;
+    height: 200px;
+}
+
+a {
+    position: relative;
+}
+
+.container {
+    padding: 0 15px;
+
+    @include min_w_sm {
+        max-width: 540px;
+        margin: auto;
+        padding: 0;
+    }
+
+    @include min_w_md {
+        max-width: 720px;
+    }
+
+    @include min_w_lg {
+        max-width: 960px;
+    }
+
+    @include min_w_lg {
+        max-width: 1140px;
+    }
+}
+
+
+h1 {
+    font-size: 2.813em;
+    font-weight: $bold;
+    color: $dark-800;
+    line-height: 116%;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: $bold;
+    color: $dark-800;
+    line-height: 116%;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: $bold;
+    color: $dark-800;
+}
+
+h4 {
+    font-size: 1.125em;
+}
+
+
+.text {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    // &-default {
+    //     color: $secondary-600;
+    // }
+
+    &-dark {
+        color: $dark-800;
+    }
+
+    // &-dark2 {
+    //     color: $secondary-800;
+    // }
+
+    &-secondary {
+        color: $dark-600;
+    }
+
+    // &-orange {
+    //     color: $orange-900;
+    // }
+
+    // &-muted {
+    //     color: $secondary-500;
+    // }
+
+    // &-light {
+    //     color: $secondary-200;
+    // }
+
+    &-xxl {
+        font-size: 2em;
+    }
+
+    &-lg {
+        font-size: 1.5em;
+    }
+
+    &-md {
+        font-size: 1.125em;
+    }
+
+    &-sm {
+        font-size: .875em;
+    }
+
+    &-xs {
+        font-size: .75em;
+    }
+
+
+    &-bold {
+        font-weight: $bold;
+    }
+
+}
